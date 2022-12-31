@@ -1,5 +1,4 @@
-#ifndef _YOLOX_CPP_UTILS_HPP
-#define _YOLOX_CPP_UTILS_HPP
+#pragma once
 
 #include <fstream>
 #include <iostream>
@@ -103,4 +102,3 @@ namespace rknpu2_ros
 
     }
 }
-#endif

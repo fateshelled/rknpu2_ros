@@ -1,5 +1,7 @@
-#ifndef _YOLOX_CPP_COCO_NAMES_HPP
-#define _YOLOX_CPP_COCO_NAMES_HPP
+#pragma once
+
+#include <vector>
+#include <string>
 
 namespace rknpu2_ros{
     static const std::vector<std::string> COCO_CLASSES = {
@@ -96,4 +98,3 @@ namespace rknpu2_ros{
         {0.50, 0.5, 0}
     };
 }
-#endif
