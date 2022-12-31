@@ -1,0 +1,17 @@
+FROM ubuntu:20.04
+ENV	 DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt upgrade && \
+    apt install -y wget git python3-dev python3-pip && \
+    apt -y clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+RUN wget https://github.com/rockchip-linux/rknn-toolkit2/raw/master/packages/rknn_toolkit2-1.4.0_22dcfef4-cp38-cp38-linux_x86_64.whl &&\
+    python3 -m pip install -U pip && \
+    python3 -m pip install numpy==1.19.5 && \
+    python3 -m pip install rknn_toolkit2-1.4.0_22dcfef4-cp38-cp38-linux_x86_64.whl && \
+    python3 -m pip install opencv-python-headless && \
+    rm rknn_toolkit2-1.4.0_22dcfef4-cp38-cp38-linux_x86_64.whl && \
+    python3 -m pip cache purge
