@@ -1,5 +1,5 @@
 # rknpu2_ros
-rknpu2 ros2 sample.
+ROS2 Inference sample for using Rockchip NPU.
 
 tested OrangePi5 (RK3588s) Ubuntu 22.04 + ROS2 Humble.
 
@@ -7,7 +7,7 @@ tested OrangePi5 (RK3588s) Ubuntu 22.04 + ROS2 Humble.
 ```bash
 # clone repository
 cd ros2_ws/src
-git clone https://github.com/fateshelled/rknpu2_ros
+git clone --recursive https://github.com/fateshelled/rknpu2_ros
 cd ../
 
 # build
