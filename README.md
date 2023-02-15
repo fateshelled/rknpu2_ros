@@ -12,7 +12,7 @@ cd ../
 
 # build
 # TARGET_SOC = RK3588 or RK356X or RV110X
-colcon build --symlink-install --packages-up-to rknpu2_ros --cmake-args -DTARGET_SOC=RK3588
+colcon build --symlink-install --packages-up-to rknpu2_ros --cmake-args -D TARGET_SOC=RK3588
 ```
 
 ## run
