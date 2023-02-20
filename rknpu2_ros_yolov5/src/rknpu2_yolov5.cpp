@@ -125,6 +125,7 @@ namespace rknpu2_ros
         }
         postprocess::execute((int8_t*)outputs[0].buf, (int8_t*)outputs[1].buf, (int8_t*)outputs[2].buf, input_h_, input_w_,
                              this->conf_th_, this->nms_th_, scale_w, scale_h, out_zps, out_scales, results, this->num_classes_);
+        rknn_outputs_release(this->ctx_, this->io_num_.n_output, outputs);
         return results;
     }
     
